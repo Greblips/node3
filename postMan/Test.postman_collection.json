@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "374a58f9-5f10-46b2-8816-d8fce54ce128",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32653624"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Евгений\",\r\n    \"lastname\": \"Керимов\",\r\n    \"username\" : \"Spilberg\",\r\n    \"email\" : \"123@fdsff.com\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:3006/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:3006/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:3006/users/65c7959422accbe90515154a"
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Мия\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:3006/users/65c7959422accbe90515154a"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:3006/users/65c793289f77a9e72d73a9ac"
+			},
+			"response": []
+		},
+		{
+			"name": "create new book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Дым и Зеркала\",\r\n    \"author\" : \"Нил Гейман\",\r\n    \"year\" : \"1905\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:3006/books"
+			},
+			"response": []
+		},
+		{
+			"name": "all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:3006/books/"
+			},
+			"response": []
+		},
+		{
+			"name": "update book",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\" : \"Джек Лондон\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:3006/books/65c7a65e133c6b516bb9d316"
+			},
+			"response": []
+		},
+		{
+			"name": "take book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://127.0.0.1:3006/users/65c797a1d7b48dd4efa077e3/books/65c7a6d8133c6b516bb9d319"
+			},
+			"response": []
+		},
+		{
+			"name": "all books user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:3006/users/65c7b2fa0909f3909ccf413e/books/"
+			},
+			"response": []
+		}
+	]
+}
